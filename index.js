@@ -23,32 +23,74 @@ return humanChoise
 
 let humanScore = 0;
 let computerScore = 0;
+let humanChoise = getHumanChoice();
+let computerChoice = getComputerChoice();
 
-function playRound() {
 
-getComputerChoice()
 
-getHumanChoise()
 
-  if (getComputerChoice() = choiceRock) {
-    if (getHumanChoice() = choiceRock) {
+function playRound(humanScore,computerChoice) {
+
+if (computerChoice = choiceRock) {
+    if (humanChoise = choiceRock) {
       console.log("draw")
       console.log("current score" + "human: " + humanScore + "computer: " + computerScore)
     }
   }
-  if (getComputerChoice() = choiceRock) {
-    if (getHumanChoice() = choicePaper) {
+  
+    if (humanChoise = choicePaper) {
       humanScore + 1;
       console.log("you win");
       console.log("current score" + "human: " + humanScore + "computer: " + computerScore)
     }
-  }
-  if (getComputerChoice() = choiceRock) {
-    if(getHumanChoice() = choiceSissors) {
+  
+    if(humanChoise = choiceSissors) {
+      computerScore + 1;
       console.log("you lose")
       console.log("current score" + "human: " + humanScore + "computer: " + computerScore)
     }
+}
+
+if (computerChoice = choicePaper) {
+  if (humanChoise = choiceRock) {
+      computerScore + 1;
+      console.log("you lose")
+      console.log("current score" + "human: " + humanScore + "computer: " + computerScore)
+  }
+  
+  
+    if (humanChoise = choicePaper) {
+      console.log("draw")
+      console.log("current score" + "human: " + humanScore + "computer: " + computerScore)
+    }
+
+  
+  
+    if(humanChoise = choiceSissors) {
+      humanScore + 1;
+      console.log("you win")
+      console.log("current score" + "human: " + humanScore + "computer: " + computerScore)
+    }
+  
+
+if (computerChoice = choiceSissors) {
+  if (humanChoise = choiceRock) {
+    humanScore + 1;
+    console.log("you win")
   }
 
+  if (humanChoise = choicePaper) {
+    computerScore + 1;
+    console.log("you lose")
+    console.log("current score" + "human: " + humanScore + "computer: " + computerScore)
+  }
+
+  if (humanChoise = choiceSissors) {
+    console.log("draw")
+    console.log("current score" + "human: " + humanScore + "computer: " + computerScore)
+  }
+}
 
 }
+
+
