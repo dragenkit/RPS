@@ -1,6 +1,6 @@
 const choiceRock = "rock"
 const choicePaper = "paper"
-const choiceSissors = "sissors"
+const choiceSissors = "sissor"
 
 function getComputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3)
@@ -23,31 +23,32 @@ return humanChoice
 
 let humanScore = 0;
 let computerScore = 0;
-let humanChoice = getHumanChoice();
+/**let humanChoice = getHumanChoice();
 let computerChoice = getComputerChoice();
-
+*/
 
 function playRound(humanChoice,computerChoice) {
-
+  
 if (computerChoice === choiceRock) {
-    if (humanChoise === choiceRock) {
+    if (humanChoice === choiceRock) {
       console.log("draw")
       console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
     }
-  }
+  
   
     if (humanChoice === choicePaper) {
-      humanScore + 1;
+      humanScore =+ 1;
       console.log("you win");
       console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
     }
   
     if(humanChoice === choiceSissors) {
-      computerScore + 1;
+      computerScore =+ 1;
       console.log("you lose")
       console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
     }
-}
+  }
+
 
 if (computerChoice === choicePaper) {
   if (humanChoice === choiceRock) {
@@ -70,12 +71,13 @@ if (computerChoice === choicePaper) {
       console.log("you win")
       console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
     }
-  
+  }
 
 if (computerChoice === choiceSissors) {
-  if (humanChoise === choiceRock) {
+  if (humanChoice === choiceRock) {
     humanScore =+ 1;
     console.log("you win")
+    console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
   }
 
   if (humanChoice === choicePaper) {
@@ -92,4 +94,21 @@ if (computerChoice === choiceSissors) {
 
 }
 
-playRound()
+function playGame() {
+
+  while (humanScore < 3 && computerScore < 3) {
+
+    let humanChoice = getHumanChoice();
+    let computerChoice = getComputerChoice();
+    
+
+    playRound(humanChoice,computerChoice);
+  }
+  if (humanScore > 3) {
+    console.log("you won the game")
+  } else if (computerScore > 3) {
+    console.log("the computer won the game")
+  }
+}
+
+playGame()
