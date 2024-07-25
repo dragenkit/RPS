@@ -37,13 +37,13 @@ if (computerChoice === choiceRock) {
   
   
     if (humanChoice === choicePaper) {
-      humanScore =+ 1;
+      humanScore += 1;
       console.log("you win");
       console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
     }
   
     if(humanChoice === choiceSissors) {
-      computerScore =+ 1;
+      computerScore += 1;
       console.log("you lose")
       console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
     }
@@ -52,14 +52,14 @@ if (computerChoice === choiceRock) {
 
 if (computerChoice === choicePaper) {
   if (humanChoice === choiceRock) {
-      computerScore =+ 1;
+      computerScore += 1;
       console.log("you lose")
       console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
   }
   
   
     if (humanChoice === choicePaper) {
-      computerScore =+ 1;
+      computerScore += 1;
       console.log("draw")
       console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
     }
@@ -67,7 +67,7 @@ if (computerChoice === choicePaper) {
   
   
     if(humanChoice === choiceSissors) {
-      humanScore =+ 1;
+      humanScore += 1;
       console.log("you win")
       console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
     }
@@ -75,13 +75,13 @@ if (computerChoice === choicePaper) {
 
 if (computerChoice === choiceSissors) {
   if (humanChoice === choiceRock) {
-    humanScore =+ 1;
+    humanScore += 1;
     console.log("you win")
     console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
   }
 
   if (humanChoice === choicePaper) {
-    computerScore =+ 1;
+    computerScore += 1;
     console.log("you lose")
     console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
   }
@@ -104,9 +104,9 @@ function playGame() {
 
     playRound(humanChoice,computerChoice);
   }
-  if (humanScore > 3) {
+  if (humanScore === 3) {
     console.log("you won the game")
-  } else if (computerScore > 3) {
+  } else if (computerScore === 3) {
     console.log("the computer won the game")
   }
 }
