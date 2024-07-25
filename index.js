@@ -15,19 +15,19 @@ if (randomNumber === 0) {
 }
 
 function getHumanChoice() {
- let humanChoise = prompt("Rock,Paper,Sissor");
+ let humanChoice = prompt("Rock,Paper,Sissor");
 
-humanChoise.toLocaleLowerCase();
-return humanChoise
+humanChoice.toLocaleLowerCase();
+return humanChoice
 }
 
 let humanScore = 0;
 let computerScore = 0;
-let humanChoise = getHumanChoice();
+let humanChoice = getHumanChoice();
 let computerChoice = getComputerChoice();
 
 
-function playRound(humanScore,computerChoice) {
+function playRound(humanChoice,computerChoice) {
 
 if (computerChoice === choiceRock) {
     if (humanChoise === choiceRock) {
@@ -36,13 +36,13 @@ if (computerChoice === choiceRock) {
     }
   }
   
-    if (humanChoise === choicePaper) {
+    if (humanChoice === choicePaper) {
       humanScore + 1;
       console.log("you win");
       console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
     }
   
-    if(humanChoise === choiceSissors) {
+    if(humanChoice === choiceSissors) {
       computerScore + 1;
       console.log("you lose")
       console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
@@ -50,23 +50,23 @@ if (computerChoice === choiceRock) {
 }
 
 if (computerChoice === choicePaper) {
-  if (humanChoise === choiceRock) {
-      computerScore + 1;
+  if (humanChoice === choiceRock) {
+      computerScore =+ 1;
       console.log("you lose")
       console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
   }
   
   
-    if (humanChoise === choicePaper) {
-      computerScore + 1;
+    if (humanChoice === choicePaper) {
+      computerScore =+ 1;
       console.log("draw")
       console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
     }
 
   
   
-    if(humanChoise === choiceSissors) {
-      humanScore + 1;
+    if(humanChoice === choiceSissors) {
+      humanScore =+ 1;
       console.log("you win")
       console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
     }
@@ -74,17 +74,17 @@ if (computerChoice === choicePaper) {
 
 if (computerChoice === choiceSissors) {
   if (humanChoise === choiceRock) {
-    humanScore + 1;
+    humanScore =+ 1;
     console.log("you win")
   }
 
-  if (humanChoise === choicePaper) {
-    computerScore + 1;
+  if (humanChoice === choicePaper) {
+    computerScore =+ 1;
     console.log("you lose")
     console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
   }
 
-  if (humanChoise === choiceSissors) {
+  if (humanChoice === choiceSissors) {
     console.log("draw")
     console.log("current score " + "human: " + humanScore + " computer: " + computerScore)
   }
