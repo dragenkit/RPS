@@ -110,5 +110,6 @@ function playGame() {
     console.log("the computer won the game")
   }
 }
-
-playGame()
+function startGame(){
+  playGame()
+}
